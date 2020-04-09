@@ -18,7 +18,7 @@ namespace PoisonCup1
 			Button FakeButton = (Button)sender;
 			int FakeButtonText = Convert.ToInt16(FakeButton.Text);
 			if (Poisoned)
-			{
+			{   
 				if (Drinking)
 				{
 					if (EmptyList.Contains(FakeButtonText))
