@@ -34,10 +34,8 @@ namespace PoisonCup1
 						}
 						else
 						{
-							FakeButton.Image =
-								Image.FromFile(
-									@"C:\Users\Femi\Desktop\Vision College\Software Development Lvl 6\ASSESSMENTS\Assignment 01\PoisonCup1\soloCup.jpg");
-							EmptyList.Add(FakeButtonText);
+							FakeButton.Image = Resource1.soloCup;
+								EmptyList.Add(FakeButtonText);
 						}
 					}
 				}
@@ -63,7 +61,7 @@ namespace PoisonCup1
 						else
 						{
 							TipCounter += 1;
-							FakeButton.Image = Image.FromFile(@"C:\Users\Femi\Desktop\Vision College\Software Development Lvl 6\ASSESSMENTS\Assignment 01\PoisonCup1\soloCup.jpg");
+							FakeButton.Image = Resource1.soloCup;
 							EmptyList.Add(FakeButtonText);
 						}
 					}

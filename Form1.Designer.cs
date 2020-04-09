@@ -48,7 +48,7 @@
 			// 
 			this.btnCup1.BackColor = System.Drawing.Color.Transparent;
 			this.btnCup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup1.Image = ((System.Drawing.Image)(resources.GetObject("btnCup1.Image")));
+			this.btnCup1.Image = global::PoisonCup1.Resource1.soloCupFull;
 			this.btnCup1.Location = new System.Drawing.Point(114, 304);
 			this.btnCup1.Name = "btnCup1";
 			this.btnCup1.Size = new System.Drawing.Size(88, 106);
@@ -61,7 +61,7 @@
 			// 
 			this.btnCup3.BackColor = System.Drawing.Color.Transparent;
 			this.btnCup3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup3.Image = ((System.Drawing.Image)(resources.GetObject("btnCup3.Image")));
+			this.btnCup3.Image = global::PoisonCup1.Resource1.soloCupFull;
 			this.btnCup3.Location = new System.Drawing.Point(302, 304);
 			this.btnCup3.Name = "btnCup3";
 			this.btnCup3.Size = new System.Drawing.Size(88, 106);
@@ -74,7 +74,7 @@
 			// 
 			this.btnCup2.BackColor = System.Drawing.Color.Transparent;
 			this.btnCup2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup2.Image = ((System.Drawing.Image)(resources.GetObject("btnCup2.Image")));
+			this.btnCup2.Image = global::PoisonCup1.Resource1.soloCupFull;
 			this.btnCup2.Location = new System.Drawing.Point(208, 304);
 			this.btnCup2.Name = "btnCup2";
 			this.btnCup2.Size = new System.Drawing.Size(88, 106);
@@ -87,7 +87,7 @@
 			// 
 			this.btnCup5.BackColor = System.Drawing.Color.Transparent;
 			this.btnCup5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup5.Image = ((System.Drawing.Image)(resources.GetObject("btnCup5.Image")));
+			this.btnCup5.Image = global::PoisonCup1.Resource1.soloCupFull;
 			this.btnCup5.Location = new System.Drawing.Point(490, 304);
 			this.btnCup5.Name = "btnCup5";
 			this.btnCup5.Size = new System.Drawing.Size(88, 106);
@@ -100,7 +100,7 @@
 			// 
 			this.btnCup4.BackColor = System.Drawing.Color.Transparent;
 			this.btnCup4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup4.Image = ((System.Drawing.Image)(resources.GetObject("btnCup4.Image")));
+			this.btnCup4.Image = global::PoisonCup1.Resource1.soloCupFull;
 			this.btnCup4.Location = new System.Drawing.Point(396, 304);
 			this.btnCup4.Name = "btnCup4";
 			this.btnCup4.Size = new System.Drawing.Size(88, 106);
@@ -113,7 +113,7 @@
 			// 
 			this.btnCup6.BackColor = System.Drawing.Color.Transparent;
 			this.btnCup6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup6.Image = ((System.Drawing.Image)(resources.GetObject("btnCup6.Image")));
+			this.btnCup6.Image = global::PoisonCup1.Resource1.soloCupFull;
 			this.btnCup6.Location = new System.Drawing.Point(584, 304);
 			this.btnCup6.Name = "btnCup6";
 			this.btnCup6.Size = new System.Drawing.Size(88, 106);
