@@ -169,7 +169,6 @@
 			// 
 			// lblRulesList
 			// 
-			this.lblRulesList.AutoSize = true;
 			this.lblRulesList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblRulesList.Location = new System.Drawing.Point(12, 76);
 			this.lblRulesList.Name = "lblRulesList";

@@ -65,36 +65,37 @@ namespace PoisonCup1
 
 		public void BtnPoison_Click(object sender, EventArgs e)
 		{
-			//enable the Drink button
+			//enable the Drink button + change button colour
 			btnDrink.Enabled = true;
 			btnDrink.BackColor = Color.Gainsboro;
 
-			//enable the Tip button
+			//enable the Tip button + change button colour
 			btnTip.Enabled = true;
 			btnTip.BackColor = Color.Gainsboro;
 
-			//disable the Poison button
+			//disable the Poison button + change button colour
 			BtnPoison.Enabled = false;
 			BtnPoison.BackColor = Color.DimGray;
 			//get a random int between 1 and 6
 			var rand = new Random();
+			//set which cup number is poisoned using the random number generator
 			PoisonedCupNum = rand.Next(1, 7);
 
-			Poisoned = true;
-			TipCounter = 0;
+			Poisoned = true; //set poisoned to true
+			TipCounter = 0; //set tip counter to 0
 
 		}
 
 		public void BtnDrink_Click(object sender, EventArgs e)
 		{
-			if (Poisoned)
+			if (Poisoned) //if the poison button has been selected and the user has chosen to drink
 			{
-				Drinking = true;
-				Tipping = false;
+				Drinking = true; //set drinking to true
+				Tipping = false; //set tipping to false - ensures tipping is false in case the user had previously been tipping
 			}
 			else
 			{
-				MessageBox.Show("You haven't poisoned any of the cups!");
+				MessageBox.Show("You haven't poisoned any of the cups!"); //if the drinking option is selected but the poison button has not yet been clicked
 			}
 		}
 
