@@ -61,6 +61,15 @@ namespace PoisonCup1 {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream losing_sound {
+            get {
+                return ResourceManager.GetStream("losing_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap soloCup {
@@ -77,6 +86,33 @@ namespace PoisonCup1 {
             get {
                 object obj = ResourceManager.GetObject("soloCupFull", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream water_drinking {
+            get {
+                return ResourceManager.GetStream("water_drinking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream water_pouring {
+            get {
+                return ResourceManager.GetStream("water_pouring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream winning_sound {
+            get {
+                return ResourceManager.GetStream("winning_sound", resourceCulture);
             }
         }
     }

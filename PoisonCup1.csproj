@@ -113,5 +113,17 @@
   <ItemGroup>
     <None Include="Resources\soloCupFull.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water-drinking.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water-pouring.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\losing-sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winning-sound.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

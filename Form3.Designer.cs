@@ -30,13 +30,14 @@
 		{
 			this.btnReset = new System.Windows.Forms.Button();
 			this.lblLose = new System.Windows.Forms.Label();
+			this.btnClose = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnReset
 			// 
 			this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnReset.ForeColor = System.Drawing.Color.Red;
-			this.btnReset.Location = new System.Drawing.Point(311, 289);
+			this.btnReset.Location = new System.Drawing.Point(253, 286);
 			this.btnReset.Name = "btnReset";
 			this.btnReset.Size = new System.Drawing.Size(151, 48);
 			this.btnReset.TabIndex = 3;
@@ -54,12 +55,25 @@
 			this.lblLose.TabIndex = 2;
 			this.lblLose.Text = "YOU LOSE!";
 			// 
+			// btnClose
+			// 
+			this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnClose.ForeColor = System.Drawing.Color.Red;
+			this.btnClose.Location = new System.Drawing.Point(422, 286);
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(151, 48);
+			this.btnClose.TabIndex = 4;
+			this.btnClose.Text = "Close";
+			this.btnClose.UseVisualStyleBackColor = true;
+			this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+			// 
 			// Form3
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Red;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnReset);
 			this.Controls.Add(this.lblLose);
 			this.Name = "Form3";
@@ -72,5 +86,6 @@
 
 		private System.Windows.Forms.Button btnReset;
 		private System.Windows.Forms.Label lblLose;
+		private System.Windows.Forms.Button btnClose;
 	}
 }

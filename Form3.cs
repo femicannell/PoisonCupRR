@@ -21,5 +21,10 @@ namespace PoisonCup1
 		{
 			Application.Restart();
 		}
+
+		private void BtnClose_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
 	}
 }

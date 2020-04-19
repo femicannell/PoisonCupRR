@@ -30,6 +30,7 @@
 		{
 			this.lblWinLose = new System.Windows.Forms.Label();
 			this.btnReset = new System.Windows.Forms.Button();
+			this.btnClose = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lblWinLose
@@ -46,7 +47,7 @@
 			// 
 			this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnReset.ForeColor = System.Drawing.Color.LimeGreen;
-			this.btnReset.Location = new System.Drawing.Point(311, 258);
+			this.btnReset.Location = new System.Drawing.Point(248, 258);
 			this.btnReset.Name = "btnReset";
 			this.btnReset.Size = new System.Drawing.Size(151, 48);
 			this.btnReset.TabIndex = 1;
@@ -54,12 +55,25 @@
 			this.btnReset.UseVisualStyleBackColor = true;
 			this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
 			// 
+			// btnClose
+			// 
+			this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnClose.ForeColor = System.Drawing.Color.LimeGreen;
+			this.btnClose.Location = new System.Drawing.Point(414, 258);
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(151, 48);
+			this.btnClose.TabIndex = 2;
+			this.btnClose.Text = "Close";
+			this.btnClose.UseVisualStyleBackColor = true;
+			this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+			// 
 			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.LimeGreen;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnReset);
 			this.Controls.Add(this.lblWinLose);
 			this.Name = "Form2";
@@ -72,5 +86,6 @@
 
 		private System.Windows.Forms.Label lblWinLose;
 		private System.Windows.Forms.Button btnReset;
+		private System.Windows.Forms.Button btnClose;
 	}
 }

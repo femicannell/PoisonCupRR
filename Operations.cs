@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +17,9 @@ namespace PoisonCup1
 	class Operations
 	{		
 		//create variables
-		public string lblOutOfTips, WinLose;
+		public string lblOutOfTips;
 		//also creates a counter for tips, so that the user can only tip out 2 cups
-		public int TipCounter, PoisonedCupNum, TotalScore;
+		public int TipCounter, PoisonedCupNum;
 		private bool Drinking, Tipping, Poisoned;
 
 		//creates a new list to store cups that have been emptied so no 2 cups can be used twice
@@ -31,13 +32,15 @@ namespace PoisonCup1
 			var rand = new Random();
 			//set which cup number is poisoned using the random number generator
 			PoisonedCupNum = rand.Next(1, 7);
+			MessageBox.Show(Convert.ToString(PoisonedCupNum));
 
 			Poisoned = true; //set poisoned to true
 			TipCounter = 0; //set tip counter to 0
 		}
 
-		public void GamePlay(object sender, Form1 Form1)
+		public void GamePlay(object sender, Form1 Form1) //main gameplay function - most of the heavy lifting happens in here
 		{
+			
 			Button FakeButton = (Button)sender;
 			int FakeButtonText = Convert.ToInt16(FakeButton.Text);
 			if (Poisoned) //if the poison button has been pressed, a random number has been generated and the game can start
@@ -52,12 +55,17 @@ namespace PoisonCup1
 					{
 						if (FakeButtonText == PoisonedCupNum) //if the cup they chose to drink is the poisoned cup - they lose/die
 						{
+							SoundPlayer LoseSound = new SoundPlayer(Resource1.losing_sound);
+							LoseSound.Play(); //plays the sound indicating they've lost
+
 							Form3 loseform = new Form3(); 
 							loseform.Show(); //show the form saying they lose
 							Form1.Hide(); //hide the main form
 						}
 						else //if the cup they choose to drink is NOT the poisoned cup - adds the cup to the list of empty cups and nothing else happens, do not win or lose
 						{
+							SoundPlayer DrinkSound = new SoundPlayer(Resource1.water_drinking);
+							DrinkSound.Play();
 							FakeButton.Image = Resource1.soloCup;
 								EmptyList.Add(FakeButtonText); //adds the cuo number to the list of empty cups
 						}
@@ -69,57 +77,58 @@ namespace PoisonCup1
 					{
 						MessageBox.Show("This cup is empty!"); //show a message box informing the user the cup they chose is already empty
 					}
-					else if (TipCounter == 2) //if they have already tipped out 2 drinks, they can't tip out any more
-					{
-						MessageBox.Show("You have already tipped out 2 drinks... No more chances."); //show a messagebox informing them they can't tip anymore drinks
-						Tipping = false; //change the tipping option to false
-						lblOutOfTips = "You are out of tips!"; //change the label under the tipping option to show they are out of tips
-					}
 					else
 					{
 						if (FakeButtonText == PoisonedCupNum) //if they tip out the poisoned cup - they win
 						{
+							SoundPlayer WinSound = new SoundPlayer(Resource1.winning_sound);
+							WinSound.Play(); //plays a sound indicating the user has won the game
+							//the user has tipped out the poison so they win the game
 							Form2 winfrm = new Form2(); 
-							winfrm.Show(); //show the winning screen/form
+							winfrm.Show(); //show the form saying the user has won
+							Form1.Hide(); //hide the main form
 						} 
 						else //if they do not tip out the poisoned cup
 						{
 							TipCounter += 1; //add 1 to the counter for tipping
 							FakeButton.Image = Resource1.soloCup;
 							EmptyList.Add(FakeButtonText); //add the cup number to the list of empty cups
+							if (TipCounter == 2)
+							{
+								SoundPlayer LoseSound = new SoundPlayer(Resource1.losing_sound);
+								LoseSound.Play(); //plays a sound indicating the user has lost the game
+								//the user loses as they have run out of chances to tip out the poison
+								Form3 loseform = new Form3();
+								loseform.Show(); //show the form saying they lose
+								Form1.Hide(); //hide the main form
+							}
+							else
+							{
+								SoundPlayer TipSound = new SoundPlayer(Resource1.water_pouring);
+								TipSound.Play();
+							}
 						}
 					}
 				}
 			}
-			//return TipCounter;
 		}
 
-		public void TipButtonClick(object sender)
+		public void TipButtonClick(object sender) //when the tip button is clicked
 		{
 			if (Poisoned)
 			{
-				if (TipCounter == 2)
-				{
-					//if the user has already tipped out 2 cups, tell them they are out of tips and change tipping to false so it won't work if they click on a cup 
-					lblOutOfTips = "You are out of tips! The game is over.";
-					Tipping = false;
-				}
-				else
-				{
 					//if a cup has been poisoned and the user has at least 1 tip left, set the action to tipping
 					Drinking = false;
 					Tipping = true;
-				}
-
 			}
 			else
 			{
 				//if the user hasn't pressed the poison button yet, so no cups are poisoned
-				MessageBox.Show("You haven't poisoned any of the cups!");
+				MessageBox.Show("You haven't poisoned any of the cups! Please press the POISON button to begin the game.");
 			}
 		}
 
-		public void DrinkButtonClick(object sender)
+		public void DrinkButtonClick(object sender) //when the drink button is clicked
 		{
 			if (Poisoned) //if the poison button has been selected and the user has chosen to drink
 			{
@@ -128,7 +137,7 @@ namespace PoisonCup1
 			}
 			else
 			{
-				MessageBox.Show("You haven't poisoned any of the cups!"); //if the drinking option is selected but the poison button has not yet been clicked
+				MessageBox.Show("You haven't poisoned any of the cups! Please press the POISON button to begin the game."); //if the drinking option is selected but the poison button has not yet been clicked
 			}
 		}
 	}

@@ -46,7 +46,7 @@
 			// 
 			// btnCup1
 			// 
-			this.btnCup1.BackColor = System.Drawing.Color.Transparent;
+			this.btnCup1.BackColor = System.Drawing.Color.White;
 			this.btnCup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCup1.Image = global::PoisonCup1.Resource1.soloCupFull;
 			this.btnCup1.Location = new System.Drawing.Point(114, 304);
@@ -124,7 +124,7 @@
 			// 
 			// btnDrink
 			// 
-			this.btnDrink.BackColor = System.Drawing.Color.DimGray;
+			this.btnDrink.BackColor = System.Drawing.Color.Teal;
 			this.btnDrink.Enabled = false;
 			this.btnDrink.Location = new System.Drawing.Point(208, 255);
 			this.btnDrink.Name = "btnDrink";
@@ -136,7 +136,7 @@
 			// 
 			// btnTip
 			// 
-			this.btnTip.BackColor = System.Drawing.Color.DimGray;
+			this.btnTip.BackColor = System.Drawing.Color.Teal;
 			this.btnTip.Enabled = false;
 			this.btnTip.Location = new System.Drawing.Point(396, 255);
 			this.btnTip.Name = "btnTip";
@@ -148,41 +148,42 @@
 			// 
 			// BtnPoison
 			// 
+			this.BtnPoison.BackColor = System.Drawing.Color.Turquoise;
+			this.BtnPoison.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnPoison.Location = new System.Drawing.Point(348, 192);
 			this.BtnPoison.Name = "BtnPoison";
 			this.BtnPoison.Size = new System.Drawing.Size(88, 47);
 			this.BtnPoison.TabIndex = 8;
 			this.BtnPoison.Text = "Poison";
-			this.BtnPoison.UseVisualStyleBackColor = true;
+			this.BtnPoison.UseVisualStyleBackColor = false;
 			this.BtnPoison.Click += new System.EventHandler(this.BtnPoison_Click);
 			// 
 			// lblTitle
 			// 
-			this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitle.Font = new System.Drawing.Font("Segoe Print", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTitle.Location = new System.Drawing.Point(208, 9);
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.Size = new System.Drawing.Size(370, 37);
+			this.lblTitle.Size = new System.Drawing.Size(370, 52);
 			this.lblTitle.TabIndex = 9;
 			this.lblTitle.Text = "Welcome to Poison Cup";
 			this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.lblTitle.Click += new System.EventHandler(this.LblTitle_Click);
 			// 
 			// lblRulesList
 			// 
-			this.lblRulesList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblRulesList.Location = new System.Drawing.Point(12, 76);
+			this.lblRulesList.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblRulesList.Location = new System.Drawing.Point(12, 88);
 			this.lblRulesList.Name = "lblRulesList";
-			this.lblRulesList.Size = new System.Drawing.Size(560, 80);
+			this.lblRulesList.Size = new System.Drawing.Size(566, 101);
 			this.lblRulesList.TabIndex = 10;
 			this.lblRulesList.Text = resources.GetString("lblRulesList.Text");
 			// 
 			// lblRulesLabel
 			// 
 			this.lblRulesLabel.AutoSize = true;
-			this.lblRulesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblRulesLabel.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblRulesLabel.Location = new System.Drawing.Point(10, 51);
 			this.lblRulesLabel.Name = "lblRulesLabel";
-			this.lblRulesLabel.Size = new System.Drawing.Size(151, 25);
+			this.lblRulesLabel.Size = new System.Drawing.Size(157, 37);
 			this.lblRulesLabel.TabIndex = 11;
 			this.lblRulesLabel.Text = "How To Play:";
 			// 
@@ -199,7 +200,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.White;
+			this.BackColor = System.Drawing.Color.PaleTurquoise;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.lblOutOfTips);
 			this.Controls.Add(this.lblRulesLabel);
@@ -216,7 +217,6 @@
 			this.Controls.Add(this.btnCup1);
 			this.Name = "Form1";
 			this.Text = "Form1";
-//			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

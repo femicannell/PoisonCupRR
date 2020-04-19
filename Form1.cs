@@ -23,13 +23,8 @@ namespace PoisonCup1
 		public Form1()
 		{
 			InitializeComponent();
-			//myOp.form1 = Form1.Hide();
 		}
 
-		private void LblTitle_Click(object sender, EventArgs e)
-		{
-
-		}
 
 		private void BtnTip_Click(object sender, EventArgs e)
 		{
@@ -41,15 +36,15 @@ namespace PoisonCup1
 		{
 			//enable the Drink button + change button colour
 			btnDrink.Enabled = true;
-			btnDrink.BackColor = Color.Gainsboro;
+			btnDrink.BackColor = Color.PaleTurquoise;
 
 			//enable the Tip button + change button colour
 			btnTip.Enabled = true;
-			btnTip.BackColor = Color.Gainsboro;
+			btnTip.BackColor = Color.PaleTurquoise;
 
 			//disable the Poison button + change button colour
 			BtnPoison.Enabled = false;
-			BtnPoison.BackColor = Color.DimGray;
+			BtnPoison.BackColor = Color.Teal;
 
 			//call the poisoning method from the Operations class
 			myOp.Poisoning(sender);
@@ -69,5 +64,3 @@ namespace PoisonCup1
 
 	}
 }
-
-//TODO drop out asap
