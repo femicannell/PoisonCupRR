@@ -14,7 +14,7 @@ namespace PoisonCup1
 
 	public partial class Form1 : Form
 	{
-
+		public int PoisonedCupNum;
 		
 
 		Operations myOp = new Operations();
@@ -29,7 +29,6 @@ namespace PoisonCup1
 		private void BtnTip_Click(object sender, EventArgs e)
 		{
 			myOp.TipButtonClick(sender);
-			lblOutOfTips.Text = myOp.lblOutOfTips;
 		}
 
 		public void BtnPoison_Click(object sender, EventArgs e)
@@ -49,6 +48,18 @@ namespace PoisonCup1
 			//call the poisoning method from the Operations class
 			myOp.Poisoning(sender);
 
+			//call the method that generates a random number - PoisonedCupNum
+			PoisonGenerator();
+		}
+
+		public int PoisonGenerator() //generates a random number and returns this value
+		{
+			//get a random int between 1 and 6 and sets the PoisonedCupNum variable to this number
+			var rand = new Random();
+			PoisonedCupNum = rand.Next(0, 7);
+
+			//return the random number - for Unit Testing
+			return PoisonedCupNum;
 		}
 
 		public void BtnDrink_Click(object sender, EventArgs e)
@@ -58,8 +69,7 @@ namespace PoisonCup1
 
 		private void btnCups_Click(object sender, EventArgs e)
 		{
-			myOp.GamePlay(sender, this);
-			lblOutOfTips.Text = myOp.lblOutOfTips;
+			myOp.GamePlay(sender, this, PoisonedCupNum);
 		}
 
 	}

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoisonCup1", "PoisonCup1.csproj", "{FB36EF03-D87A-421B-8ECE-D109BC58F07E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestRR", "UnitTestRR\UnitTestRR.csproj", "{378D183A-7E87-426B-A918-C364A5377636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FB36EF03-D87A-421B-8ECE-D109BC58F07E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB36EF03-D87A-421B-8ECE-D109BC58F07E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB36EF03-D87A-421B-8ECE-D109BC58F07E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378D183A-7E87-426B-A918-C364A5377636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378D183A-7E87-426B-A918-C364A5377636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378D183A-7E87-426B-A918-C364A5377636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378D183A-7E87-426B-A918-C364A5377636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

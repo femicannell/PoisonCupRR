@@ -16,29 +16,20 @@ namespace PoisonCup1
 {
 	class Operations
 	{		
-		//create variables
-		public string lblOutOfTips;
-		//also creates a counter for tips, so that the user can only tip out 2 cups
-		public int TipCounter, PoisonedCupNum;
-		private bool Drinking, Tipping, Poisoned;
+		//Creating variables - also creates a counter for tips (TipCounter), so that the user can only tip out 2 cups
+		public int TipCounter;
+		public bool Drinking, Tipping, Poisoned;
 
 		//creates a new list to store cups that have been emptied so no 2 cups can be used twice
 		public List<int> EmptyList = new List<int>();
 
 		public void Poisoning(object sender)
 		{
-			
-			//get a random int between 1 and 6
-			var rand = new Random();
-			//set which cup number is poisoned using the random number generator
-			PoisonedCupNum = rand.Next(1, 7);
-			MessageBox.Show(Convert.ToString(PoisonedCupNum));
-
 			Poisoned = true; //set poisoned to true
 			TipCounter = 0; //set tip counter to 0
 		}
 
-		public void GamePlay(object sender, Form1 Form1) //main gameplay function - most of the heavy lifting happens in here
+		public void GamePlay(object sender, Form1 Form1, int PoisonedCupNum) //main gameplay function - most of the heavy lifting happens in here
 		{
 			
 			Button FakeButton = (Button)sender;

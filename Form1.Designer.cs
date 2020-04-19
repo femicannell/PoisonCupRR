@@ -29,12 +29,6 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			this.btnCup1 = new System.Windows.Forms.Button();
-			this.btnCup3 = new System.Windows.Forms.Button();
-			this.btnCup2 = new System.Windows.Forms.Button();
-			this.btnCup5 = new System.Windows.Forms.Button();
-			this.btnCup4 = new System.Windows.Forms.Button();
-			this.btnCup6 = new System.Windows.Forms.Button();
 			this.btnDrink = new System.Windows.Forms.Button();
 			this.btnTip = new System.Windows.Forms.Button();
 			this.BtnPoison = new System.Windows.Forms.Button();
@@ -42,85 +36,13 @@
 			this.lblRulesList = new System.Windows.Forms.Label();
 			this.lblRulesLabel = new System.Windows.Forms.Label();
 			this.lblOutOfTips = new System.Windows.Forms.Label();
+			this.btnCup6 = new System.Windows.Forms.Button();
+			this.btnCup4 = new System.Windows.Forms.Button();
+			this.btnCup5 = new System.Windows.Forms.Button();
+			this.btnCup2 = new System.Windows.Forms.Button();
+			this.btnCup3 = new System.Windows.Forms.Button();
+			this.btnCup1 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
-			// 
-			// btnCup1
-			// 
-			this.btnCup1.BackColor = System.Drawing.Color.White;
-			this.btnCup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup1.Image = global::PoisonCup1.Resource1.soloCupFull;
-			this.btnCup1.Location = new System.Drawing.Point(114, 304);
-			this.btnCup1.Name = "btnCup1";
-			this.btnCup1.Size = new System.Drawing.Size(88, 106);
-			this.btnCup1.TabIndex = 0;
-			this.btnCup1.Text = "1";
-			this.btnCup1.UseVisualStyleBackColor = false;
-			this.btnCup1.Click += new System.EventHandler(this.btnCups_Click);
-			// 
-			// btnCup3
-			// 
-			this.btnCup3.BackColor = System.Drawing.Color.Transparent;
-			this.btnCup3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup3.Image = global::PoisonCup1.Resource1.soloCupFull;
-			this.btnCup3.Location = new System.Drawing.Point(302, 304);
-			this.btnCup3.Name = "btnCup3";
-			this.btnCup3.Size = new System.Drawing.Size(88, 106);
-			this.btnCup3.TabIndex = 1;
-			this.btnCup3.Text = "3";
-			this.btnCup3.UseVisualStyleBackColor = false;
-			this.btnCup3.Click += new System.EventHandler(this.btnCups_Click);
-			// 
-			// btnCup2
-			// 
-			this.btnCup2.BackColor = System.Drawing.Color.Transparent;
-			this.btnCup2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup2.Image = global::PoisonCup1.Resource1.soloCupFull;
-			this.btnCup2.Location = new System.Drawing.Point(208, 304);
-			this.btnCup2.Name = "btnCup2";
-			this.btnCup2.Size = new System.Drawing.Size(88, 106);
-			this.btnCup2.TabIndex = 2;
-			this.btnCup2.Text = "2";
-			this.btnCup2.UseVisualStyleBackColor = false;
-			this.btnCup2.Click += new System.EventHandler(this.btnCups_Click);
-			// 
-			// btnCup5
-			// 
-			this.btnCup5.BackColor = System.Drawing.Color.Transparent;
-			this.btnCup5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup5.Image = global::PoisonCup1.Resource1.soloCupFull;
-			this.btnCup5.Location = new System.Drawing.Point(490, 304);
-			this.btnCup5.Name = "btnCup5";
-			this.btnCup5.Size = new System.Drawing.Size(88, 106);
-			this.btnCup5.TabIndex = 3;
-			this.btnCup5.Text = "5";
-			this.btnCup5.UseVisualStyleBackColor = false;
-			this.btnCup5.Click += new System.EventHandler(this.btnCups_Click);
-			// 
-			// btnCup4
-			// 
-			this.btnCup4.BackColor = System.Drawing.Color.Transparent;
-			this.btnCup4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup4.Image = global::PoisonCup1.Resource1.soloCupFull;
-			this.btnCup4.Location = new System.Drawing.Point(396, 304);
-			this.btnCup4.Name = "btnCup4";
-			this.btnCup4.Size = new System.Drawing.Size(88, 106);
-			this.btnCup4.TabIndex = 4;
-			this.btnCup4.Text = "4";
-			this.btnCup4.UseVisualStyleBackColor = false;
-			this.btnCup4.Click += new System.EventHandler(this.btnCups_Click);
-			// 
-			// btnCup6
-			// 
-			this.btnCup6.BackColor = System.Drawing.Color.Transparent;
-			this.btnCup6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCup6.Image = global::PoisonCup1.Resource1.soloCupFull;
-			this.btnCup6.Location = new System.Drawing.Point(584, 304);
-			this.btnCup6.Name = "btnCup6";
-			this.btnCup6.Size = new System.Drawing.Size(88, 106);
-			this.btnCup6.TabIndex = 5;
-			this.btnCup6.Text = "6";
-			this.btnCup6.UseVisualStyleBackColor = false;
-			this.btnCup6.Click += new System.EventHandler(this.btnCups_Click);
 			// 
 			// btnDrink
 			// 
@@ -160,7 +82,7 @@
 			// 
 			// lblTitle
 			// 
-			this.lblTitle.Font = new System.Drawing.Font("Segoe Print", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitle.Font = new System.Drawing.Font("Retro Gaming", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblTitle.Location = new System.Drawing.Point(208, 9);
 			this.lblTitle.Name = "lblTitle";
 			this.lblTitle.Size = new System.Drawing.Size(370, 52);
@@ -170,10 +92,10 @@
 			// 
 			// lblRulesList
 			// 
-			this.lblRulesList.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblRulesList.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblRulesList.Location = new System.Drawing.Point(12, 88);
 			this.lblRulesList.Name = "lblRulesList";
-			this.lblRulesList.Size = new System.Drawing.Size(566, 101);
+			this.lblRulesList.Size = new System.Drawing.Size(589, 101);
 			this.lblRulesList.TabIndex = 10;
 			this.lblRulesList.Text = resources.GetString("lblRulesList.Text");
 			// 
@@ -195,6 +117,84 @@
 			this.lblOutOfTips.Name = "lblOutOfTips";
 			this.lblOutOfTips.Size = new System.Drawing.Size(182, 23);
 			this.lblOutOfTips.TabIndex = 12;
+			// 
+			// btnCup6
+			// 
+			this.btnCup6.BackColor = System.Drawing.Color.Transparent;
+			this.btnCup6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCup6.Image = global::PoisonCup1.Resource1.soloCupFull;
+			this.btnCup6.Location = new System.Drawing.Point(584, 304);
+			this.btnCup6.Name = "btnCup6";
+			this.btnCup6.Size = new System.Drawing.Size(88, 106);
+			this.btnCup6.TabIndex = 5;
+			this.btnCup6.Text = "6";
+			this.btnCup6.UseVisualStyleBackColor = false;
+			this.btnCup6.Click += new System.EventHandler(this.btnCups_Click);
+			// 
+			// btnCup4
+			// 
+			this.btnCup4.BackColor = System.Drawing.Color.Transparent;
+			this.btnCup4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCup4.Image = global::PoisonCup1.Resource1.soloCupFull;
+			this.btnCup4.Location = new System.Drawing.Point(396, 304);
+			this.btnCup4.Name = "btnCup4";
+			this.btnCup4.Size = new System.Drawing.Size(88, 106);
+			this.btnCup4.TabIndex = 4;
+			this.btnCup4.Text = "4";
+			this.btnCup4.UseVisualStyleBackColor = false;
+			this.btnCup4.Click += new System.EventHandler(this.btnCups_Click);
+			// 
+			// btnCup5
+			// 
+			this.btnCup5.BackColor = System.Drawing.Color.Transparent;
+			this.btnCup5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCup5.Image = global::PoisonCup1.Resource1.soloCupFull;
+			this.btnCup5.Location = new System.Drawing.Point(490, 304);
+			this.btnCup5.Name = "btnCup5";
+			this.btnCup5.Size = new System.Drawing.Size(88, 106);
+			this.btnCup5.TabIndex = 3;
+			this.btnCup5.Text = "5";
+			this.btnCup5.UseVisualStyleBackColor = false;
+			this.btnCup5.Click += new System.EventHandler(this.btnCups_Click);
+			// 
+			// btnCup2
+			// 
+			this.btnCup2.BackColor = System.Drawing.Color.Transparent;
+			this.btnCup2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCup2.Image = global::PoisonCup1.Resource1.soloCupFull;
+			this.btnCup2.Location = new System.Drawing.Point(208, 304);
+			this.btnCup2.Name = "btnCup2";
+			this.btnCup2.Size = new System.Drawing.Size(88, 106);
+			this.btnCup2.TabIndex = 2;
+			this.btnCup2.Text = "2";
+			this.btnCup2.UseVisualStyleBackColor = false;
+			this.btnCup2.Click += new System.EventHandler(this.btnCups_Click);
+			// 
+			// btnCup3
+			// 
+			this.btnCup3.BackColor = System.Drawing.Color.Transparent;
+			this.btnCup3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCup3.Image = global::PoisonCup1.Resource1.soloCupFull;
+			this.btnCup3.Location = new System.Drawing.Point(302, 304);
+			this.btnCup3.Name = "btnCup3";
+			this.btnCup3.Size = new System.Drawing.Size(88, 106);
+			this.btnCup3.TabIndex = 1;
+			this.btnCup3.Text = "3";
+			this.btnCup3.UseVisualStyleBackColor = false;
+			this.btnCup3.Click += new System.EventHandler(this.btnCups_Click);
+			// 
+			// btnCup1
+			// 
+			this.btnCup1.BackColor = System.Drawing.Color.White;
+			this.btnCup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCup1.Image = global::PoisonCup1.Resource1.soloCupFull;
+			this.btnCup1.Location = new System.Drawing.Point(114, 304);
+			this.btnCup1.Name = "btnCup1";
+			this.btnCup1.Size = new System.Drawing.Size(88, 106);
+			this.btnCup1.TabIndex = 0;
+			this.btnCup1.Text = "1";
+			this.btnCup1.UseVisualStyleBackColor = false;
+			this.btnCup1.Click += new System.EventHandler(this.btnCups_Click);
 			// 
 			// Form1
 			// 
