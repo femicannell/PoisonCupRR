@@ -7,13 +7,36 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
+
+//TODO make reset method, have to bring cup buttons over from Form1 (use a list?)
+
+
 namespace PoisonCup1
 {
 	class Operations
-	{
+	{		
+		//create variables
 		public string lblOutOfTips, WinLose;
-		public int TipCounter;
-		public void GamePlay(object sender, bool Poisoned, bool Drinking, List<int> EmptyList, int PoisonedCupNum, bool Tipping, int TipCounter)
+		//also creates a counter for tips, so that the user can only tip out 2 cups
+		public int TipCounter, PoisonedCupNum, TotalScore;
+		private bool Drinking, Tipping, Poisoned;
+
+		//creates a new list to store cups that have been emptied so no 2 cups can be used twice
+		public List<int> EmptyList = new List<int>();
+
+		public void Poisoning(object sender)
+		{
+			
+			//get a random int between 1 and 6
+			var rand = new Random();
+			//set which cup number is poisoned using the random number generator
+			PoisonedCupNum = rand.Next(1, 7);
+
+			Poisoned = true; //set poisoned to true
+			TipCounter = 0; //set tip counter to 0
+		}
+
+		public void GamePlay(object sender, Form1 Form1)
 		{
 			Button FakeButton = (Button)sender;
 			int FakeButtonText = Convert.ToInt16(FakeButton.Text);
@@ -31,6 +54,7 @@ namespace PoisonCup1
 						{
 							Form3 loseform = new Form3(); 
 							loseform.Show(); //show the form saying they lose
+							Form1.Hide(); //hide the main form
 						}
 						else //if the cup they choose to drink is NOT the poisoned cup - adds the cup to the list of empty cups and nothing else happens, do not win or lose
 						{
@@ -70,7 +94,7 @@ namespace PoisonCup1
 			//return TipCounter;
 		}
 
-		public void TipButtonClick(object sender, bool Poisoned, int TipCounter, bool Drinking, bool Tipping)
+		public void TipButtonClick(object sender)
 		{
 			if (Poisoned)
 			{
@@ -95,7 +119,7 @@ namespace PoisonCup1
 			}
 		}
 
-		public void DrinkButtonClick(object sender, bool Poisoned, bool Drinking, bool Tipping)
+		public void DrinkButtonClick(object sender)
 		{
 			if (Poisoned) //if the poison button has been selected and the user has chosen to drink
 			{

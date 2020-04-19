@@ -14,13 +14,8 @@ namespace PoisonCup1
 
 	public partial class Form1 : Form
 	{
-		//create variables, all of these are global
-		//also creates a counter for tips, so that the user can only tip out 2 cups
-		private bool Poisoned, Drinking, Tipping;
-		private int PoisonedCupNum, TipCounter;
 
-		//creates a new list to store cups that have been emptied so no 2 cups can be used twice
-		public List<int> EmptyList = new List<int>();
+		
 
 		Operations myOp = new Operations();
 
@@ -38,7 +33,7 @@ namespace PoisonCup1
 
 		private void BtnTip_Click(object sender, EventArgs e)
 		{
-			myOp.TipButtonClick(sender, Poisoned, TipCounter, Drinking, Tipping);
+			myOp.TipButtonClick(sender);
 			lblOutOfTips.Text = myOp.lblOutOfTips;
 		}
 
@@ -55,26 +50,24 @@ namespace PoisonCup1
 			//disable the Poison button + change button colour
 			BtnPoison.Enabled = false;
 			BtnPoison.BackColor = Color.DimGray;
-			//get a random int between 1 and 6
-			var rand = new Random();
-			//set which cup number is poisoned using the random number generator
-			PoisonedCupNum = rand.Next(1, 7);
 
-			Poisoned = true; //set poisoned to true
-			TipCounter = 0; //set tip counter to 0
+			//call the poisoning method from the Operations class
+			myOp.Poisoning(sender);
 
 		}
 
 		public void BtnDrink_Click(object sender, EventArgs e)
 		{
-			myOp.DrinkButtonClick(sender, Poisoned, Drinking, Tipping);
+			myOp.DrinkButtonClick(sender);
 		}
 
 		private void btnCups_Click(object sender, EventArgs e)
 		{
-			myOp.GamePlay(sender, Poisoned, Drinking, EmptyList, PoisonedCupNum, Tipping, TipCounter);
+			myOp.GamePlay(sender, this);
 			lblOutOfTips.Text = myOp.lblOutOfTips;
 		}
 
 	}
 }
+
+//TODO drop out asap
