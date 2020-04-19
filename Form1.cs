@@ -17,7 +17,7 @@ namespace PoisonCup1
 		//create variables, all of these are global
 		//also creates a counter for tips, so that the user can only tip out 2 cups
 		private bool Poisoned, Drinking, Tipping;
-		private int PoisonedCupNum, FakeButtonText, TipCounter;
+		private int PoisonedCupNum, TipCounter;
 
 		//creates a new list to store cups that have been emptied so no 2 cups can be used twice
 		public List<int> EmptyList = new List<int>();
@@ -38,29 +38,8 @@ namespace PoisonCup1
 
 		private void BtnTip_Click(object sender, EventArgs e)
 		{
-
-
-			if (Poisoned)
-			{
-				if (TipCounter == 2)
-				{
-					//if the user has already tipped out 2 cups, tell them they are out of tips and change tipping to false so it won't work if they click on a cup 
-					lblOutOfTips.Text = "You are out of tips!";
-					Tipping = false;
-				}
-				else
-				{
-					//if a cup has been poisoned and the user has at least 1 tip left, set the action to tipping
-					Drinking = false;
-					Tipping = true;
-				}
-				
-			}
-			else
-			{
-				//if the user hasn't pressed the poison button yet, so no cups are poisoned
-				MessageBox.Show("You haven't poisoned any of the cups!");
-			}
+			myOp.TipButtonClick(sender, Poisoned, TipCounter, Drinking, Tipping);
+			lblOutOfTips.Text = myOp.lblOutOfTips;
 		}
 
 		public void BtnPoison_Click(object sender, EventArgs e)
@@ -88,20 +67,7 @@ namespace PoisonCup1
 
 		public void BtnDrink_Click(object sender, EventArgs e)
 		{
-			if (Poisoned) //if the poison button has been selected and the user has chosen to drink
-			{
-				Drinking = true; //set drinking to true
-				Tipping = false; //set tipping to false - ensures tipping is false in case the user had previously been tipping
-			}
-			else
-			{
-				MessageBox.Show("You haven't poisoned any of the cups!"); //if the drinking option is selected but the poison button has not yet been clicked
-			}
-		}
-
-		private void Form1_Load(object sender, EventArgs e)
-		{
-
+			myOp.DrinkButtonClick(sender, Poisoned, Drinking, Tipping);
 		}
 
 		private void btnCups_Click(object sender, EventArgs e)

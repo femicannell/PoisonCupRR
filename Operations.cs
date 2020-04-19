@@ -12,6 +12,7 @@ namespace PoisonCup1
 	class Operations
 	{
 		public string lblOutOfTips, WinLose;
+		public int TipCounter;
 		public void GamePlay(object sender, bool Poisoned, bool Drinking, List<int> EmptyList, int PoisonedCupNum, bool Tipping, int TipCounter)
 		{
 			Button FakeButton = (Button)sender;
@@ -65,6 +66,45 @@ namespace PoisonCup1
 						}
 					}
 				}
+			}
+			//return TipCounter;
+		}
+
+		public void TipButtonClick(object sender, bool Poisoned, int TipCounter, bool Drinking, bool Tipping)
+		{
+			if (Poisoned)
+			{
+				if (TipCounter == 2)
+				{
+					//if the user has already tipped out 2 cups, tell them they are out of tips and change tipping to false so it won't work if they click on a cup 
+					lblOutOfTips = "You are out of tips! The game is over.";
+					Tipping = false;
+				}
+				else
+				{
+					//if a cup has been poisoned and the user has at least 1 tip left, set the action to tipping
+					Drinking = false;
+					Tipping = true;
+				}
+
+			}
+			else
+			{
+				//if the user hasn't pressed the poison button yet, so no cups are poisoned
+				MessageBox.Show("You haven't poisoned any of the cups!");
+			}
+		}
+
+		public void DrinkButtonClick(object sender, bool Poisoned, bool Drinking, bool Tipping)
+		{
+			if (Poisoned) //if the poison button has been selected and the user has chosen to drink
+			{
+				Drinking = true; //set drinking to true
+				Tipping = false; //set tipping to false - ensures tipping is false in case the user had previously been tipping
+			}
+			else
+			{
+				MessageBox.Show("You haven't poisoned any of the cups!"); //if the drinking option is selected but the poison button has not yet been clicked
 			}
 		}
 	}
