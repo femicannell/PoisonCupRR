@@ -142,5 +142,3 @@ namespace PoisonCup1
 		}
 	}
 }
-
-//blah blah
