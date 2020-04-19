@@ -14,7 +14,7 @@ namespace PoisonCup1
 
 	public partial class Form1 : Form
 	{
-		public int PoisonedCupNum;
+		public int PoisonedCupNum, TipCounter;
 		
 
 		Operations myOp = new Operations();
@@ -25,6 +25,7 @@ namespace PoisonCup1
 			InitializeComponent();
 		}
 
+		
 
 		private void BtnTip_Click(object sender, EventArgs e)
 		{
@@ -50,6 +51,7 @@ namespace PoisonCup1
 
 			//call the method that generates a random number - PoisonedCupNum
 			PoisonGenerator();
+
 		}
 
 		public int PoisonGenerator() //generates a random number and returns this value
@@ -67,10 +69,12 @@ namespace PoisonCup1
 			myOp.DrinkButtonClick(sender);
 		}
 
+
 		private void btnCups_Click(object sender, EventArgs e)
 		{
 			myOp.GamePlay(sender, this, PoisonedCupNum);
 		}
 
+		
 	}
 }

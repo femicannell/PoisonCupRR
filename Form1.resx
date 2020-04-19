@@ -122,7 +122,7 @@
 2. Choose: drink or tip?
     - If you drink, select a cup and you will drink it. If it is poisoned, you lose.
     - If you tip, select a cup and it will be tipped out. If it is poisoned, you win. 
-       You have 2 chances to tip out the right cup, if you don't tip the right cup in this time, you lose.
+You have 2 chances to tip out the right cup, if you don't tip the right cup in this time, you lose.
 </value>
   </data>
 </root>

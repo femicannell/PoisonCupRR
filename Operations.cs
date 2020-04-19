@@ -23,10 +23,12 @@ namespace PoisonCup1
 		//creates a new list to store cups that have been emptied so no 2 cups can be used twice
 		public List<int> EmptyList = new List<int>();
 
-		public void Poisoning(object sender)
+		public int Poisoning(object sender)
 		{
 			Poisoned = true; //set poisoned to true
 			TipCounter = 0; //set tip counter to 0
+			return TipCounter; //returns TipCounter (for testing)
+
 		}
 
 		public void GamePlay(object sender, Form1 Form1, int PoisonedCupNum) //main gameplay function - most of the heavy lifting happens in here
